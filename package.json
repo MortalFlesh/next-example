@@ -1,8 +1,6 @@
 {
   "name": "next-example",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
+  "private": true,
   "dependencies": {
     "next": "^4.2.3",
     "react": "^16.2.0",
