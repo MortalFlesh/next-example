@@ -2,6 +2,7 @@
   "name": "next-example",
   "private": true,
   "dependencies": {
+    "isomorphic-unfetch": "^2.0.0",
     "next": "^4.2.3",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
@@ -11,5 +12,8 @@
     "build": "next build",
     "start": "next start",
     "deps": "rimraf node_modules yarn.lock flow-typed/npm && yarn && flow-typed install"
+  },
+  "devDependencies": {
+    "flow-bin": "^0.64.0"
   }
 }
