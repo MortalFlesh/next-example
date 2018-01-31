@@ -8,6 +8,7 @@ class Index extends React.Component {
     // eslint-disable-next-line no-undef
     const res = await fetch('https://api.github.com/repos/zeit/next.js');
     const json = await res.json();
+
     return { stars: json.stargazers_count };
   }
 
@@ -18,7 +19,7 @@ class Index extends React.Component {
   render() {
     return (
       <Page>
-        <div>Seconds: {this.state.stars}</div>
+        <div>Seconds: {this.props.stars}</div>
       </Page>
     );
   }
