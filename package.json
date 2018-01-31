@@ -14,6 +14,7 @@
     "deps": "rimraf node_modules yarn.lock flow-typed/npm && yarn && flow-typed install"
   },
   "devDependencies": {
-    "flow-bin": "^0.64.0"
+    "flow-bin": "^0.64.0",
+    "flow-typed": "^2.3.0"
   }
 }

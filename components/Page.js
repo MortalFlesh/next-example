@@ -1,9 +1,14 @@
+// @flow
 import * as React from 'react';
 import MainNavigation from './MainNavigation';
 
 const Container = ({ children }) => <div>{children}</div>;
 
-class Page extends React.Component {
+type Props = {
+  children: React.Node,
+};
+
+class Page extends React.Component<Props> {
   render() {
     return (
       <Container>

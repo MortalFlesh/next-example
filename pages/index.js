@@ -3,7 +3,11 @@ import * as React from 'react';
 import Page from '../components/Page';
 import 'isomorphic-unfetch';
 
-class Index extends React.Component {
+type Props = {|
+  stars: number,
+|};
+
+class Index extends React.Component<Props> {
   static async getInitialProps() {
     // eslint-disable-next-line no-undef
     const res = await fetch('https://api.github.com/repos/zeit/next.js');
@@ -12,14 +16,10 @@ class Index extends React.Component {
     return { stars: json.stargazers_count };
   }
 
-  //state = {
-  //    seconds: Date.now(),
-  //  };
-
   render() {
     return (
       <Page>
-        <div>Seconds: {this.props.stars}</div>
+        <div>Stars: {this.props.stars} *</div>
       </Page>
     );
   }

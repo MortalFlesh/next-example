@@ -1,6 +1,7 @@
+// @flow
 import * as React from 'react';
 
-class MainNav extends React.Component {
+class MainNav extends React.Component<{}> {
   render() {
     return <div>MainNav</div>;
   }
