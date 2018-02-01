@@ -1,9 +1,24 @@
 // @flow
 import * as React from 'react';
+import Link from 'next/link';
 
-class MainNav extends React.Component<{}> {
+const Separator = () => <span> | </span>;
+
+class MainNav extends React.PureComponent<{}> {
   render() {
-    return <div>MainNav</div>;
+    return (
+      <div>
+        <Link href="/">
+          <a>home</a>
+        </Link>
+
+        <Separator />
+
+        <Link href="/about">
+          <a>about</a>
+        </Link>
+      </div>
+    );
   }
 }
 

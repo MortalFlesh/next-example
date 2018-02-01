@@ -8,7 +8,7 @@ import { browserThemeLight, browserThemeDark } from '../theme/browserThemes';
 type Props = { children: Node };
 type State = { theme: Theme };
 
-class ThemeToggler extends React.Component<Props, State> {
+class ThemeToggler extends React.PureComponent<Props, State> {
   state = {
     theme: browserThemeLight,
   };

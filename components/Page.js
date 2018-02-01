@@ -10,13 +10,13 @@ type Props = {|
   heading: string,
 |};
 
-class Page extends React.Component<Props> {
+class Page extends React.PureComponent<Props> {
   render() {
     return (
       <ThemeToggler>
         <Container>
-          <Heading>{this.props.heading}</Heading>
           <MainNavigation />
+          <Heading>{this.props.heading}</Heading>
           {this.props.children}
         </Container>
       </ThemeToggler>

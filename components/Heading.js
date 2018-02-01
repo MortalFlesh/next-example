@@ -5,7 +5,7 @@ type Props = {|
   children: React.Node,
 |};
 
-class Heading extends React.Component<Props> {
+class Heading extends React.PureComponent<Props> {
   render() {
     return (
       <ThemeConsumer>

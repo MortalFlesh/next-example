@@ -6,7 +6,7 @@ type Props = {|
   children: React.Node,
 |};
 
-class Container extends React.Component<Props> {
+class Container extends React.PureComponent<Props> {
   render() {
     return (
       <ThemeConsumer>

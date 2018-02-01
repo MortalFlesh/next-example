@@ -2,6 +2,7 @@
 import * as React from 'react';
 import Page from '../components/Page';
 import 'isomorphic-unfetch';
+import Text from '../components/Text';
 
 type Props = {|
   stars: number,
@@ -17,9 +18,10 @@ class Index extends React.Component<Props> {
   }
 
   render() {
+    console.log({ stars: this.props.stars });
     return (
       <Page heading="Example Next">
-        <div>Stars: {this.props.stars} *</div>
+        <Text>{`Stars: ${this.props.stars} \u{2605}`}</Text>
       </Page>
     );
   }
