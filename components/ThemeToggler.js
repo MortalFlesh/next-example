@@ -8,9 +8,13 @@ import { browserThemeLight, browserThemeDark } from '../theme/browserThemes';
 type Props = { children: Node };
 type State = { theme: Theme };
 
+const storage = {
+  theme: browserThemeLight,
+};
+
 class ThemeToggler extends React.PureComponent<Props, State> {
   state = {
-    theme: browserThemeLight,
+    theme: storage.theme,
   };
 
   render() {
@@ -20,12 +24,16 @@ class ThemeToggler extends React.PureComponent<Props, State> {
       <ThemeProvider value={this.state.theme}>
         <button
           onClick={() => {
-            this.setState(state => ({
-              theme:
+            this.setState(state => {
+              const theme =
                 state.theme.type === 'light'
                   ? browserThemeDark
-                  : browserThemeLight,
-            }));
+                  : browserThemeLight;
+
+              storage.theme = theme;
+
+              return { theme };
+            });
           }}
         >
           Toggle theme
