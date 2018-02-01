@@ -4,7 +4,7 @@ import Page from '../components/Page';
 
 class About extends React.Component<{}> {
   render() {
-    return <Page>about</Page>;
+    return <Page heading="About">about</Page>;
   }
 }
 

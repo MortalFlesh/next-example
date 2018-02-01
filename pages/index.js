@@ -18,7 +18,7 @@ class Index extends React.Component<Props> {
 
   render() {
     return (
-      <Page>
+      <Page heading="Example Next">
         <div>Stars: {this.props.stars} *</div>
       </Page>
     );
