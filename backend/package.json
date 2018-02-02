@@ -19,6 +19,8 @@
   },
   "devDependencies": {
     "dotenv": "5.0.0",
+    "flow-bin": "^0.64.0",
+    "flow-typed": "^2.3.0",
     "graphql-cli": "2.13.0",
     "nodemon": "1.14.12",
     "npm-run-all": "4.1.2",
