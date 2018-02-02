@@ -1,3 +1,4 @@
+// @flow
 require('babel-register');
 const { GraphQLServer } = require('graphql-yoga');
 const { Prisma } = require('prisma-binding');
